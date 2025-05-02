@@ -1,9 +1,3 @@
-<?php
-  $nama = $_POST['nama'] ?? '';
-  $umur = $_POST['umur'] ?? '';
-  $hobi = $_POST['hobi'] ?? '';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +19,11 @@
 <body>
 
   <?php
+  
+    $nama = $_POST['nama'] ?? '';
+    $umur = $_POST['umur'] ?? '';
+    $hobi = $_POST['hobi'] ?? '';
+    
     $isDone = !empty($nama) && !empty($umur) && !empty($hobi);
 
     if ($isDone) {
@@ -59,7 +58,7 @@
             <p class="inline-block w-100"></p>
             <button type="submit">Submit</button>
           </div>
-          
+
         </form>
       <?php
     }
